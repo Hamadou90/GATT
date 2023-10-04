@@ -1,0 +1,20 @@
+----------------------------------------- Dump of the Database -------------------------------------------
+pg_dump -U postgres -h localhost -d GESTIONSUIVITACHES > E:\GESTIONSUIVITACHES_v1.sql
+
+------------------------------------- Duplicate Table Without Data In It ---------------------------------
+CREATE TABLE admin AS SELECT * FROM users WITH NO DATA \g
+
+
+----------------------------------------- Drop Table's column -------------------------------------------
+ALTER TABLE tbl_name DROP COLUMN col_name;
+
+------------------------------------------- Drop Table's column -----------------------------------------
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
+
+
+-------------------------------------------- Change a Table's column ------------------------------------
+ALTER TABLE table_name ALTER COLUMN col_name SET DEFAULT default_value;
+
+
+------------------------------------------------ Add Foreign Key ---------------------------------------------------------
+ALTER TABLE table_name ADD CONSTRAINT fk_name FOREIGN KEY (table_attribute) REFERENCES parent_table_name(parent_table_attribute);
